@@ -1,0 +1,33 @@
+{
+    "pages":[
+    "pages/Film/Film",
+    "pages/logs/logs"
+    ],
+    "tabBar": {
+        "backgroundColor": "#000",
+        "color": "#fff",
+        "selectedColor": "red",
+        "list": [
+            {
+                "pagePath": "pages/Film/Film",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/Film/Film",
+                "text": "电影推荐"
+            },
+            {
+                "pagePath": "pages/Film/Film",
+                "text": "电影搜索"
+            }
+        ]
+    },
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "林 Film",
+        "navigationBarTextStyle":"white",
+        "position": "top"
+    }
+
+}
