@@ -1,0 +1,36 @@
+@import "../index.wxss";
+#Film {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+}
+#Film > view {
+    padding:0 10rpx;
+    display: flex;
+    flex-direction: left;
+    border-bottom: 4px solid #000;
+    height: 360rpx;
+    background-color: #376956;
+}
+#Film > view .f-left {
+    width: 40%;
+    margin-right: 4%;
+    height: 100%;
+}
+#Film > view .f-left image {
+    width: 100%;
+    height: 100%;
+}
+#Film > view .f-right {
+    width: 56%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #376956;
+    color: #fafafa;
+}
+#Film > view .f-right text {
+    font-size: 24rpx;
+}

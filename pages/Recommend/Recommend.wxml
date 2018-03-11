@@ -1,0 +1,3 @@
+<import src="../../utils/Film.wxml"></import>
+<template is="FilmData" data="{{FilmData}}"></template>
+<!-- 公共模块 -->

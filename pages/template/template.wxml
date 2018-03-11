@@ -1,0 +1,12 @@
+<template name="FilmData">
+    <view id='Film' wx:for="{{FilmData}}">
+        <view>
+            <view class='f-left'>
+                <image src='{{item.images.large}}'></image>
+            </view>
+            <view class='f-right'>
+                <text>电影名：{{item.title}}\n导演：{{item.directors[0].name}}\n国家：{{item.countries}}\n剧情：{{item.genres}}\n评分数：{{item.rating.average}}\n时间：{{item.year}}</text>
+            </view>
+        </view>
+    </view>
+</template>

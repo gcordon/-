@@ -1,7 +1,11 @@
 {
-    "pages":[
-    "pages/Film/Film",
-    "pages/logs/logs"
+    "pages": [
+        "pages/Film/Film",
+        "pages/Search/Search",
+        "pages/Recommend/Recommend",
+        "pages/Details/Details",
+        "pages/logs/logs",
+        "pages/template/template"
     ],
     "tabBar": {
         "backgroundColor": "#000",
@@ -13,21 +17,20 @@
                 "text": "首页"
             },
             {
-                "pagePath": "pages/Film/Film",
+                "pagePath": "pages/Recommend/Recommend",
                 "text": "电影推荐"
             },
             {
-                "pagePath": "pages/Film/Film",
+                "pagePath": "pages/Search/Search",
                 "text": "电影搜索"
             }
         ]
     },
-    "window":{
-        "backgroundTextStyle":"light",
+    "window": {
+        "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#000",
         "navigationBarTitleText": "林 Film",
-        "navigationBarTextStyle":"white",
+        "navigationBarTextStyle": "white",
         "position": "top"
     }
-
 }

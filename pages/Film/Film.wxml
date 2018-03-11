@@ -2,31 +2,20 @@
     <!-- 轮播图 -->
     <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" style='width:100%;height:350rpx;'/>
-    </swiper-item>
-  </block>
-</swiper>
-        <!-- countries:国家
-        directors:导演
-        genres: 风格
-        original_title: 电影名
-        rating: 评级
-        summary： 总结 -->
-        <!-- 加载图标 -->
-        <loading hidden="{{hiddenLoading}}">正在加载</loading>
-        <!-- 加载图标 -->
-    <view id='Film' wx:for="{{FilmData}}">
-        
-        <view>
-       
-            <view class='f-left'>
-                <image src='{{item.images.large}}'></image>
-            </view>
-            <view class='f-right'>
-                <text>电影名：{{item.title}}\n导演：{{item.directors[0].name}}\n国家：{{item.countries}}\n剧情：{{item.genres}}\n评分数：{{item.rating.average}}\n时间：{{item.year}}</text>
-            </view>
-        </view>
-    </view>
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" style='width:100%;height:350rpx;'/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- countries:国家
+    directors:导演
+    genres: 风格
+    original_title: 电影名
+    rating: 评级
+    summary： 总结 -->
+    <!-- 公共模块 -->
+    <import src="../../utils/Film.wxml"></import>
+    <template is="FilmData" data="{{FilmData}}"></template>
+    <!-- 公共模块 -->
 </block>

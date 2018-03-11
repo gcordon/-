@@ -1,0 +1,15 @@
+<view id='details'>
+    <view class='d-content'>
+        <view class='txt'>
+            <text class='title'>{{FilmData.original_title}}</text>
+            <text>\n评分：{{FilmData.rating.average}}\n</text>
+            <text>年代:{{FilmData.year}} / {{FilmData.directors[0].name}}(导演) \n({{FilmData.countries}}) \n</text>
+           主演: <text wx:for="{{ToStar}}">{{item}},</text>
+        </view>
+        <view class='img'>
+            <image src='{{FilmData.images.large}}'></image>
+        </view>
+    </view>
+    <view class='d-detailed'>
+    </view>
+</view>

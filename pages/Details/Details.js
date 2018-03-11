@@ -5,37 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-      imgUrls: [
-          'http://www.moepan.net/uploads/2018031010354034391930.jpg',
-          'http://www.moepan.net/uploads/2018031010355996473950.jpg',
-          'http://www.moepan.net/uploads/2018031010361798167065.jpg'
-      ],
-      indicatorDots: true,
-      autoplay: true,
-      interval: 3000,
-      duration: 1000,
+      newFilmData: {},
+      ToStar: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  log(log) {
-    console.log(log)
-  },
   onLoad: function (options) {
-    // 加载豆瓣热映
-      console.log(FilmTools)
-      FilmTools.getWellreceived(this, 'WellReceived')
+      console.log(options)
+      // 加载豆瓣详情
+      wx.showLoading({
+          title: '加载中',
+      })
+      let self = this
+      wx.request({
+          url: `http://t.yushu.im/v2/movie/subject/${Number(options.id)}`, //加载豆瓣热映api
+          header: {
+              'content-type': 'application/json' // 默认值
+          },
+          success: function (res) {
+              let s = res.data
+              self.setData({
+                  FilmData: s
+              })
+              wx.hideLoading()
+              for (let i = 0; i < s.casts.length; i++) {
+                  self.data.ToStar.push(s.casts[i].name)
+                  self.setData({
+                      ToStar: self.data.ToStar
+                  })
+              }
+          }
+      })
   },
-    //   跳转到details详细页面
-  detailsNavigateGo(e) {
-      FilmTools.detailsNavigateGo(e)
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+  
   },
 
   /**

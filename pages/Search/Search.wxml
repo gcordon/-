@@ -1,0 +1,11 @@
+<view id='searchMain'>
+    <view class='s-input'>
+        <input type='text' placeholder='输入您需要查找的电影名' bindinput='getSearchValue'></input>
+       <button class="zan-btn zan-btn--danger" bindtap='clickSearch'>搜索</button>
+    </view>
+    <!-- 公共模块 -->
+    <view class='hr'></view>
+    <import src="../../utils/Film.wxml"></import>
+    <template is="FilmData" data="{{FilmData}}"></template>
+    <!-- 公共模块 -->
+</view>
